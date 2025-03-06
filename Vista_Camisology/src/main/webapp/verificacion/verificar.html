@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Código</title>
+    <link rel="stylesheet" href="verificar.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Verifica tu Código</h1>
+        
+        <form action="../verificar" method="POST">
+            <input type="hidden" name="accion" value="verificar">
+            <input type="hidden" name="correo" id="correo" value=""> 
+            <label for="codigo">Código de Verificación:</label>
+            <input type="text" id="codigo" name="codigo" required>
+            <button type="submit">Verificar</button>
+        </form>
+        
+        <div class="message" id="message">
+        </div>
+    </div>
+
+    <script src="verificar.js"></script>
+</body>
+</html>

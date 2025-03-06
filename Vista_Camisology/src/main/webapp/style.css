@@ -1,0 +1,723 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; 
+}
+
+/* SECCION HEADER */
+header {
+    background-color: #0D1F22;
+    position: fixed;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 1000; 
+}
+
+.logo {
+    font-family: 'Bebas Neue', sans-serif; 
+    color: #16BF78;
+    font-size: 47px;
+    margin-left: 40px;
+}
+
+
+.enlaces-categorias {
+    display: flex;
+    gap: 30px; 
+}
+
+.enlaces-categorias a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.enlaces-categorias a:hover {
+    color: #16BF78;
+}
+       
+
+.iconos-header {
+    display: flex;
+    gap: 20px;
+}
+
+.iconos-header img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.pestana-perfil,
+.pestana-carrito {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 100;
+    display: none;
+    width: 200px;
+}
+    
+.botonIniciar {
+    background-color: #16BF78;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.botonRegistro{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+/* SECCION INICIAR SESION */
+
+
+
+.modal {
+    font-family: 'Roboto', sans-serif;
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+
+}
+.contenido-modal h2{
+    text-align: center;
+}
+
+.contenido-modal {
+    background-color: #0D1F22 ;
+    color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.cerrar-boton {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar-boton:hover, .cerrar-boton:focus {
+    color: #ff5555;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid;
+    border-radius: 7px;
+}
+
+.boton-enviar {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #005d1e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-enviar:hover {
+    background-color: #023c15;
+}
+
+
+/* SECCION REGISTRO*/
+
+.modal-registrarse {
+    font-family: 'Roboto', sans-serif;
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+    transition: opacity 0.3s ease-in-out;
+}
+
+.contenido-modal-registrarse {
+    background-color: #0D1F22;
+    color: white;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.contenido-modal-registrarse h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.cerrar-boton-registrarse {
+    color: #aaa;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar-boton-registrarse:hover, 
+.cerrar-boton-registrarse:focus {
+    color: #ff5555;
+}
+
+.modal-registrarse form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-registrarse input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background-color: #f5f5f5;
+}
+
+.modal-registrarse .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.modal-registrarse .checkbox input {
+    margin-right: 10px;
+}
+
+.boton-enviar-registrarse {
+    font-family: 'Roboto', sans-serif;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #005d1e;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.boton-enviar-registrarse:hover {
+    background-color: #023c15;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+
+
+.subida-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+.subida-imagen input[type="file"] {
+    display: none;
+}
+
+
+.subida-imagen label {
+    color: black;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+
+#nombre-archivo {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* SECCION MINI PESTAÑA */
+
+.mini-pestana {
+    position: fixed;
+    top: 90px; 
+    right: 20px; 
+    background: #0D1F22; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px; 
+    width: 240px;
+    height: 0; 
+    overflow: hidden; 
+    opacity: 0; 
+    visibility: hidden; 
+    z-index: 1000;
+    transition: height 0.4s ease, opacity 0.4s ease; 
+}
+
+
+.mini-pestana-activa {
+    height: 120px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.boton {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: linear-gradient(145deg, #16bf78, #12a868);
+    box-shadow: 0px 4px 8px rgba(22, 191, 120, 0.3); 
+    transition: all 0.3s ease;
+}
+
+
+.boton.boton-rojo {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff; 
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: linear-gradient(145deg, #ff4c4c, #ff1a1a); 
+    box-shadow: 0px 4px 8px rgba(255, 76, 76, 0.3); 
+    transition: all 0.3s ease;
+}
+
+.boton.boton-rojo:hover {
+    background: linear-gradient(145deg, #ff1a1a, #ff4c4c); 
+    box-shadow: 0px 6px 12px rgba(255, 76, 76, 0.5); 
+}
+
+.boton-secundario {
+    background: linear-gradient(145deg, #005d1e, #004715);
+    box-shadow: 0px 4px 8px rgba(0, 93, 30, 0.3);
+}
+
+.boton:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 6px 12px rgba(22, 191, 120, 0.4);
+}
+
+/* CARRITO */
+
+.modal-carrito {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contenido-modal-carrito {
+    background-color: #0D1F22;
+    color: white;
+    margin: 10% auto;  
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+.cerrar-boton {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar-boton:hover,
+.cerrar-boton:focus {
+    color: #ff5555;
+}
+
+
+main {
+    padding-top: 60px;
+}   
+/* SECCION PORTADA */
+
+ .portada {
+    width: 100%;
+    height: 90vh;
+    background-image: url('./img/fondos/soccer-2650433_1920.jpg');
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.portada h1 {
+    font-size: 60px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white; 
+    font-weight: normal; 
+    text-align: center; 
+}
+
+.portada button {
+    background-color: #005d1e;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    font-size: 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.portada button:hover {
+    background-color: #00CC55;
+    transform: scale(1.05);
+}
+
+/* SECCION BENEFICIOS */
+
+.beneficios {
+    display: flex;
+    justify-content: space-between; 
+    background-color: #0D1F22; 
+    color: white; 
+    padding: 10px; 
+}
+
+
+.beneficio {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+.beneficio img {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* SECCIÓN LAS MÁS VENDIDAS */
+.mas-vendidas {
+    margin: 30px;
+    padding: 20px 0;
+    background-color: white;
+    text-align: left;
+}
+
+.mas-vendidas h2 {
+    margin-left: 20px;
+    font-size: 50px;
+    font-weight: normal; 
+    color: black;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+
+.contenedor-carrusel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.carrusel {
+    display: flex;
+    gap: 40px; 
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Cuadro producto */
+.producto {
+    text-align: center;
+    flex-shrink: 0;
+    width: 280px; 
+    height: 420px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative; 
+    overflow: hidden;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    background-color: white;
+}
+
+
+.btn-add-cart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(22, 191, 120, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out; 
+    text-transform: uppercase; 
+    backdrop-filter: blur(5px);
+}
+
+.producto:hover .btn-add-cart {
+    opacity: 1;
+}
+
+.producto:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagen-producto {
+    background-color: #ede8e8;
+    width: 100%; 
+    height: 250px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-producto img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+}
+
+
+
+.descripcion-producto {
+    width: 100%;
+    text-align: center;
+}
+
+.descripcion-producto p {
+    margin: 5px;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+}
+
+.descripcion-producto p strong {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.boton-carrusel {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-30%);
+    background-color: #16BF78;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.boton-carrusel.izquierdo {
+    left: 10px;
+}
+
+.boton-carrusel.derecho {
+    right: 10px;
+}
+
+.boton-carrusel:hover {
+    background-color: #005d1e;
+}
+
+/* SECCIÓN DIFERENTES LIGAS */
+
+
+
+.contenedor-ligas {
+    margin: 30px;
+    margin-top: 100px;
+}
+
+.contenedor-ligas h2 {
+    margin-left: 20px;
+    font-size: 50px;
+    font-weight: normal; 
+    color: black;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.cuadros {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.cuadro {
+    position: relative;
+    width: 23%; 
+    height: 500px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); 
+    overflow: hidden;
+    transition: transform 0.3s ease; 
+}
+
+
+.cuadro:hover {
+    transform: scale(1.05);
+}
+
+.imagen-cuadro {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+    text-align: center;
+
+}
+
+
+/* FOOTER */
+
+.pie-pagina {
+    background-color: #0D1F22;
+    color: white; 
+    padding: 20px 10px; 
+    text-align: center; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.enlaces-footer {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 15px;
+}
+
+.enlaces-footer a {
+    text-decoration: none; 
+    color: white;
+    transition: color 0.3s ease; 
+    font-size: 14px;
+}
+
+.enlaces-footer a:hover {
+    color: #16BF78; 
+}
+
+
+.frasefinal{
+    font-size: 27px;
+    font-family: 'Bebas Neue', sans-serif; 
+}
+
+.copyright {
+    font-size: 12px; 
+    margin-top: 20px; 
+}
